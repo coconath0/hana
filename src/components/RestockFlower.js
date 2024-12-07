@@ -6,7 +6,7 @@ const RestockFlower = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:5000/flowers/${flowerId}/restock`, {
+        fetch(`https://hana-florist.onrender.com/flowers/${flowerId}/restock`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

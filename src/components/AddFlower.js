@@ -11,7 +11,7 @@ const AddFlower = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("http://localhost:5000/flowers", {
+        fetch("https://hana-florist.onrender.com/flowers", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -7,7 +7,7 @@ const SellFlower = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:5000/flowers/${flowerId}/sell`, {
+        fetch(`https://hana-florist.onrender.com/flowers/${flowerId}/sell`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

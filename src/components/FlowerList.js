@@ -5,7 +5,7 @@ const FlowerList = () => {
     const [status, setStatus] = useState("");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/flowers${status ? `?status=${status}` : ""}`)
+        fetch(`https://hana-florist.onrender.com/flowers${status ? `?status=${status}` : ""}`)
             .then((res) => res.json())
             .then((data) => setFlowers(data))
             .catch((err) => console.error("Error fetching flowers:", err));
