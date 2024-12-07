@@ -8,6 +8,7 @@ Hana is a full-stack web application built with **React** for the frontend and *
 - [Installation](#installation)
 - [Backend Setup](#backend-setup)
 - [Frontend Setup](#frontend-setup)
+- [Deployment](#deployment)
 - [Usage](#usage)
 
 ## **Features**
@@ -21,6 +22,7 @@ Hana is a full-stack web application built with **React** for the frontend and *
 - **Frontend**: React, HTML, CSS
 - **Backend**: Node.js, Express
 - **Database**: MongoDB (MongoDB Atlas for cloud storage)
+- **Deployment**: Render (for full-stack deployment)
 
 ## **Installation**
 
@@ -86,6 +88,38 @@ The React app communicates with the backend through the following API calls:
 - **POST** `/flowers`: Sends data to add a new flower.
 - **PUT** `/flowers/:id/restock`: Restocks a specific flower.
 - **PUT** `/flowers/:id/sell`: Marks a flower as sold.
+
+## **Deployment**
+
+To deploy this project to **Render**, follow the steps below:
+
+### **1. Prepare the Project for Deployment**
+1. **Build the React App**:
+   In the root directory, build the React app by running:
+   ```bash
+   npm run build
+   ```
+
+2. **Configure the Backend to Serve the Frontend**:
+   In the `backend/server.js` file, update your Express server to serve the React build files in production:
+
+   ```javascript
+   const path = require('path');
+   
+   app.use(express.static(path.join(__dirname, '..', 'build')));
+
+   app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+   });
+   ```
+
+### **2. Deploy to Render**
+1. **Create a Render Account**: If you don’t have one, sign up at [Render](https://render.com/).
+2. **Connect GitHub Repository to Render**: Link your GitHub repository to Render.
+3. **Set Up Backend Deployment**: Configure the **Node.js** environment in Render to deploy the backend.
+4. **Set Up Frontend Deployment**: Build the React app using Render’s build command and serve it with Express.
+
+Once deployed, Render will provide you with a public URL where both the frontend and backend will be accessible.
 
 ## **Usage**
 
