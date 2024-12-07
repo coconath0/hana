@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 const port = 5000;
@@ -109,11 +110,10 @@ app.put('/flowers/:id/restock', async (req, res) => {
     res.send('Flower restocked');
 });
 
-const path = require('path');
 app.use(express.static(path.join(__dirname, '..', 'src', 'build')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'src', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
 });
 
 // Start  server
