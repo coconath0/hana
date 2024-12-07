@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F3EAF4;
+    color: #4B5E38;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #E5CEDC;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #8C6574;
+    text-align: center;
+}
+
+ul.flower-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul.flower-list li {
+    background-color: #F0E3EE;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #D1B9C4;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #B0CC95;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4B5E38;
+}
+
+label {
+    font-weight: 600;
+    color: #8C6574;
+    
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: 2px solid #BCA3AC;
+    border-radius: 5px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #B0CC95;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #4B5E38;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: #4B5E38; 
+    color: #B0CC95; 
+}
