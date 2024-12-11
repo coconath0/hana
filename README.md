@@ -2,6 +2,8 @@
 
 Hana is a full-stack web application built with **React** for the frontend and **Express** for the backend. It allows users to manage flowers in a flower store, including adding new flowers, restocking, and marking them as sold.
 
+Repository link: https://github.com/coconath0/hana
+
 ## **Table of Contents**
 - [Features](#features)
 - [Tech Stack](#tech-stack)
